@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js.git"
+    "url": "git+https://github.com/martijnhoogendoorn/applicationinsights-httpheaderfilter-js.git"
   },
   "author": "Martijn Hoogendoorn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js/issues"
+    "url": "https://github.com/martijnhoogendoorn/applicationinsights-httpheaderfilter-js/issues"
   },
-  "homepage": "https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js#readme",
+  "homepage": "https://github.com/martijnhoogendoorn/applicationinsights-httpheaderfilter-js#readme",
   "dependencies": {
     "@microsoft/applicationinsights-common": ">=2.5.1",
     "@microsoft/applicationinsights-core-js": ">=2.5.1"
