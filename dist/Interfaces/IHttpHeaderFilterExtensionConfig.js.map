@@ -1,0 +1,1 @@
+{"version":3,"file":"IHttpHeaderFilterExtensionConfig.js","sourceRoot":"","sources":["../../src/Interfaces/IHttpHeaderFilterExtensionConfig.ts"],"names":[],"mappings":"","sourcesContent":["export interface IHttpHeaderFilterExtensionConfig {\r\n  filteredHeaders?: {\r\n    [key: string]: string;\r\n  },\r\n}\r\n"]}
