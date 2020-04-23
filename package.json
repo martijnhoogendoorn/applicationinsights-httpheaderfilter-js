@@ -1,0 +1,23 @@
+{
+  "name": "applicationinsights-httpheaderfilter-js",
+  "version": "1.0.1",
+  "description": "Provides an Application Insights extension which filters out configured http headers before sending",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js.git"
+  },
+  "author": "Martijn Hoogendoorn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js/issues"
+  },
+  "homepage": "https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js#readme",
+  "dependencies": {
+    "@microsoft/applicationinsights-common": ">=2.5.1",
+    "@microsoft/applicationinsights-core-js": ">=2.5.1"
+  }
+}
