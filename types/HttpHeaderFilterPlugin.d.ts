@@ -2,7 +2,7 @@ import { IPageViewTelemetry, IMetricTelemetry, IConfig } from '@microsoft/applic
 import { IPlugin, IConfiguration, IAppInsightsCore, BaseTelemetryPlugin, ITelemetryItem, IProcessTelemetryContext, ITelemetryPluginChain, ICustomProperties } from "@microsoft/applicationinsights-core-js";
 export default class HttpHeaderFilterPlugin extends BaseTelemetryPlugin {
     priority: number;
-    static identifier: string;
+    identifier: string;
     private _analyticsPlugin;
     private _extensionConfig;
     initialize(config: IConfiguration & IConfig, core: IAppInsightsCore, extensions: IPlugin[], pluginChain?: ITelemetryPluginChain): void;

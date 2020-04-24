@@ -1,9 +1,9 @@
 {
   "name": "applicationinsights-httpheaderfilter-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "types": "./types/applicationinsights-httpheaderfilter.d.ts",
   "description": "Provides an Application Insights extension which filters out configured http headers before sending",
-  "main": "index.js",
+  "main": "dist/applicationinsights-httpheaderfilter.js",
   "scripts": {
     "build": "npm run clean && npm run build:esm",
     "clean": "rm -rf dist && rm -rf types",

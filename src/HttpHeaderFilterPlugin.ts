@@ -4,7 +4,7 @@ import { IHttpHeaderFilterExtensionConfig } from './Interfaces/IHttpHeaderFilter
 
 export default class HttpHeaderFilterPlugin extends BaseTelemetryPlugin {
     public priority : number = 200;
-    public static identifier: string = "HttpHeaderFilterPlugin";
+    public identifier: string = "HttpHeaderFilterPlugin";
 
     private _analyticsPlugin!: IAppInsights;
     private _extensionConfig!: IHttpHeaderFilterExtensionConfig | undefined;
@@ -13,8 +13,8 @@ export default class HttpHeaderFilterPlugin extends BaseTelemetryPlugin {
         super.initialize(config, core, extensions, pluginChain);
         
         this._extensionConfig =
-            config.extensionConfig && config.extensionConfig[HttpHeaderFilterPlugin.identifier]
-                ? (config.extensionConfig[HttpHeaderFilterPlugin.identifier] as IHttpHeaderFilterExtensionConfig)
+            config.extensionConfig && config.extensionConfig[this.identifier]
+                ? (config.extensionConfig[this.identifier] as IHttpHeaderFilterExtensionConfig)
                 : undefined;
 
         CoreUtils.arrForEach(extensions, ext => {

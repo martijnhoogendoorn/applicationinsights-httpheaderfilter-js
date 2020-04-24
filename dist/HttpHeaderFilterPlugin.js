@@ -6,14 +6,15 @@ var HttpHeaderFilterPlugin = /** @class */ (function (_super) {
     function HttpHeaderFilterPlugin() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.priority = 200;
+        _this.identifier = "HttpHeaderFilterPlugin";
         return _this;
     }
     HttpHeaderFilterPlugin.prototype.initialize = function (config, core, extensions, pluginChain) {
         var _this = this;
         _super.prototype.initialize.call(this, config, core, extensions, pluginChain);
         this._extensionConfig =
-            config.extensionConfig && config.extensionConfig[HttpHeaderFilterPlugin.identifier]
-                ? config.extensionConfig[HttpHeaderFilterPlugin.identifier]
+            config.extensionConfig && config.extensionConfig[this.identifier]
+                ? config.extensionConfig[this.identifier]
                 : undefined;
         CoreUtils.arrForEach(extensions, function (ext) {
             var identifier = ext.identifier;
@@ -77,7 +78,6 @@ var HttpHeaderFilterPlugin = /** @class */ (function (_super) {
             this.diagLog().throwInternal(LoggingSeverity.CRITICAL, _InternalMessageId.TelemetryInitializerFailed, "Analytics plugin is not available, React plugin telemetry will not be sent: ");
         }
     };
-    HttpHeaderFilterPlugin.identifier = "HttpHeaderFilterPlugin";
     return HttpHeaderFilterPlugin;
 }(BaseTelemetryPlugin));
 export default HttpHeaderFilterPlugin;
