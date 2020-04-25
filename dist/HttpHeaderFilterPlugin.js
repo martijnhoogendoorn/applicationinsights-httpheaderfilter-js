@@ -43,8 +43,17 @@ var HttpHeaderFilterPlugin = /** @class */ (function (_super) {
                         if (filteredHeader !== undefined && headerProperty !== undefined) {
                             // If a replacement value is configured
                             if (((_a = _this._extensionConfig) === null || _a === void 0 ? void 0 : _a.filteredHeaders)[filteredHeader]) {
+                                var headerConfig = ((_b = _this._extensionConfig) === null || _b === void 0 ? void 0 : _b.filteredHeaders)[filteredHeader];
                                 // Enter the replacement value
-                                headers_1[headerProperty] = ((_b = _this._extensionConfig) === null || _b === void 0 ? void 0 : _b.filteredHeaders)[filteredHeader];
+                                if (headerConfig.length == 1) {
+                                    headers_1[headerProperty] = headerConfig[0];
+                                }
+                                else {
+                                    var currentValue = headers_1[headerProperty];
+                                    var regexMatcher = headerConfig[0];
+                                    var regexReplace = headerConfig[1];
+                                    headers_1[headerProperty] = currentValue.replace(regexMatcher, regexReplace);
+                                }
                             }
                             else {
                                 // Otherwise, silently delete the property

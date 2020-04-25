@@ -42,8 +42,16 @@ export default class HttpHeaderFilterPlugin extends BaseTelemetryPlugin {
                         if(filteredHeader !== undefined && headerProperty !== undefined) {
                             // If a replacement value is configured
                             if(this._extensionConfig?.filteredHeaders![filteredHeader]) {
+                                const headerConfig = this._extensionConfig?.filteredHeaders![filteredHeader];
                                 // Enter the replacement value
-                                headers[headerProperty] = this._extensionConfig?.filteredHeaders![filteredHeader];
+                                if(headerConfig.length == 1) {
+                                    headers[headerProperty] = headerConfig[0];
+                                } else {
+                                    let currentValue : string = headers[headerProperty];
+                                    let regexMatcher : string = headerConfig[0];
+                                    let regexReplace : string = headerConfig[1];
+                                    headers[headerProperty] = currentValue.replace(regexMatcher, regexReplace);
+                                }
                             } else {
                                 // Otherwise, silently delete the property
                                 delete headers[headerProperty];

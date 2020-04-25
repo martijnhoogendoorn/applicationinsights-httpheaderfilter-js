@@ -1,6 +1,6 @@
 {
   "name": "applicationinsights-httpheaderfilter-js",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "types": "./types/applicationinsights-httpheaderfilter.d.ts",
   "description": "Provides an Application Insights extension which filters out configured http headers before sending",
   "main": "dist/applicationinsights-httpheaderfilter.js",
@@ -23,6 +23,7 @@
   "dependencies": {
     "@microsoft/applicationinsights-common": ">=2.5.1",
     "@microsoft/applicationinsights-core-js": ">=2.5.1",
+    "@types/xregexp": "^4.3.0",
     "grunt-cli": "^1.3.2",
     "typescript": "^3.8.3"
   },

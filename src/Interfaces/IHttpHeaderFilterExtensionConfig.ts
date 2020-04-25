@@ -1,5 +1,5 @@
 export interface IHttpHeaderFilterExtensionConfig {
   filteredHeaders?: {
-    [key: string]: string;
+    [key: string]: string[2];
   },
 }
